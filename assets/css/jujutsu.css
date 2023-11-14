@@ -1,0 +1,218 @@
+/* FONTS */
+@font-face {
+  font-family: Jujutsu Kaisen;
+  src: url(..//fonts/jujutsukaisen/Jujutsu\ Kaisen.ttf);
+}
+
+/*  UNIVERSAL SELECTOR */
+* {
+  margin: 0px;
+  height: 0px;
+  list-style: none;
+  text-decoration: none;
+  font-family: Jujutsu Kaisen;
+  scroll-behavior: smooth;
+  color: #ffffff;
+}
+
+body {
+  background-color: #000000;
+}
+/* SCROLL */
+::-webkit-scrollbar {
+  width: 7px;
+  background-color: #2c2a337c;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #292929;
+  border-radius: 5px;
+}
+
+/* MENU */
+header {
+  width: 100%;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  background-color: #000000;
+}
+
+header ul {
+  margin-right: 80px;
+  gap: 20px;
+  display: flex;
+  background-color: blueviolet;
+}
+header ul li a {
+  font-weight: 600;
+  font-size: 1.1rem;
+}
+
+/* PAG JUJUTSU */
+
+.pagJujutsu {
+  width: 100%;
+  height: 100vh;
+  background-image: url(..//img/jujutsu/background.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.pagJujutsu div {
+  width: 100%;
+  height: 100vh;
+  background-color: #0000008c;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.pagJujutsu div h1,
+.pagJujutsu div p {
+  margin-left: 100px;
+}
+.pagJujutsu div h1 {
+  width: 50%;
+  height: 150px;
+  margin-bottom: 20px;
+  font-size: 5rem;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.pagJujutsu div p {
+  width: 40%;
+  height: 60px;
+  margin-top: 20px;
+  font-size: 2rem;
+  font-weight: 500;
+}
+
+/*  PERSONAGENS */
+
+.personagensJujutsu {
+  width: 100%;
+  height: max-content;
+  background-image: url(..//img/jujutsu/background2.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.personagensJujutsu div {
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: #00000099;
+}
+
+/* TITLE */
+.personagensJujutsu div h1 {
+  font-size: 2.5rem;
+  font-weight: 800;
+  margin-top: 100px;
+  margin-left: 100px;
+  text-transform: uppercase;
+}
+
+/* BOX CHARACTER */
+.boxCharacter {
+  width: 75%;
+  height: max-content;
+  margin-inline: auto;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 20px 10px #000;
+  padding: 30px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 30px;
+  background-color: #e600007c;
+}
+
+.boxCharacter li {
+  height: 400px;
+  position: relative;
+}
+
+.boxCharacter li:hover {
+  box-shadow: 0px 0px 20px 0px #ffff;
+  border-radius: 10px;
+}
+
+.boxCharacter a figure,
+.capita div figure {
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center top;
+  border-radius: 10px;
+}
+
+#sukuna {
+  background-image: url(..//img/jujutsu/sukuna.jpg);
+}
+
+#yuji {
+  background-image: url(..//img/jujutsu/yuugi.jpg);
+}
+
+#fushiguro {
+  background-image: url(..//img/jujutsu/fushiguro.jpg);
+}
+
+#satoro {
+  background-image: url(..//img/jujutsu/satoro\ gojo.jpg);
+}
+
+#nanami {
+  background-image: url(..//img/jujutsu/nanami.jpg);
+}
+
+#yuta {
+  background-image: url(..//img/jujutsu/yuta.jpg);
+}
+
+.boxCharacter a figcaption {
+  width: 100%;
+  height: 80px;
+  background-color: #000000;
+  position: absolute;
+  bottom: 0px;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 10px;
+}
+.boxCharacter a figcaption h4 {
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  font-weight: 600;
+  margin-left: 20px;
+  margin-bottom: 20px;
+}
+
+.boxCharacter a figcaption p {
+  margin: 0px;
+  font-size: 1rem;
+  margin-left: 20px;
+}
+
+/* FOOTER */
+.footerkaisen {
+  width: 100%;
+  height: 200px;
+}
+
+.footerkaisen div {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+}
