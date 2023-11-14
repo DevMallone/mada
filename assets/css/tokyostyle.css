@@ -1,0 +1,175 @@
+/* GOOGLE FONTS */
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+/* RESET PAGE */
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+  color: var(--color-font-primary);
+}
+
+/* BODY */
+body {
+  height: 100vh;
+  width: 100%;
+  background-color: #151515;
+}
+
+/* ROOT COLORS */
+:root {
+  --color-font-primary: #f4f4f4;
+  --color-font-secondary: #b3b3b3;
+  --important-color: #f02c15;
+  --background-primary: #151515;
+  --background-secondary: #2b2b2b;
+}
+
+/* BANNER TOKYO */
+.bannerTokyo {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background-image: url(..//img/tokyorevengers/background/tokyobackground.png);
+  background-size: cover;
+  background-position: center top;
+}
+
+.bannerShadowTokyo {
+  background-color: #ff1302e0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+}
+
+.bannerShadowTokyo div {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+}
+
+.bannerShadowTokyo figure {
+  width: 40%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.bannerShadowTokyo figure img {
+  width: 400px;
+  position: absolute;
+  bottom: 0px;
+  filter: drop-shadow(-10px 5px 0px var(--background-secondary));
+  animation: imgCharacterUp 1s;
+}
+
+@keyframes imgCharacterUp {
+  0% {
+    bottom: -100%;
+  }
+}
+
+.bannerShadowTokyo figcaption {
+  width: 35%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.bannerShadowTokyo figcaption img {
+  width: 100% !important;
+  margin-top: 70px;
+  margin-bottom: 10px;
+}
+
+.bannerShadowTokyo figcaption h1 {
+  margin-bottom: 20px;
+  font-size: 2.3rem;
+  text-transform: uppercase;
+  font-weight: 900;
+}
+
+.bannerShadowTokyo figcaption p {
+  font-weight: 600;
+  line-height: 25px;
+  width: 95%;
+  overflow: auto;
+  padding: 10px;
+  padding-left: 14px;
+  padding-right: 20px;
+  margin-bottom: 50px;
+  background-color: #1b1b1b28;
+  backdrop-filter: blur(3px);
+  border-radius: 5px;
+}
+
+.bannerShadowTokyo figcaption p::-webkit-scrollbar {
+  width: 7px;
+  border-radius: 10px;
+  background-color: var(--background-secondary);
+}
+
+.bannerShadowTokyo figcaption p::-webkit-scrollbar-thumb {
+  background-color: var(--color-font-primary);
+  border-radius: 10px;
+}
+
+/* CHARACHTERS */
+.takemichi img {
+  width: 360px !important;
+}
+
+.draken img {
+  width: 295px !important;
+}
+
+/* CHANGE CHARACTER */
+.selectCharacter {
+  width: 200px;
+  height: 100%;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+.selectCharacter div {
+  border-radius: 100%;
+  background-color: var(--background-secondary);
+  border: 3px solid var(--background-primary);
+  box-shadow: 5px 5px 20px 0px #1b1b1b90;
+  overflow: hidden;
+  width: 100px;
+  height: 100px;
+}
+
+.selectCharacter div {
+  cursor: pointer;
+}
+
+.selectCharacter div figure {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.selectCharacter div figure img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.changeLogoName {
+  background-color: rgb(255, 0, 0);
+}
