@@ -10,6 +10,7 @@
   box-sizing: border-box;
   font-family: "Montserrat", sans-serif;
   color: var(--color-font-primary);
+  user-select: none !important;
 }
 
 /* BODY */
@@ -63,6 +64,7 @@ body {
 .bannerShadowTokyo figure img {
   width: 400px;
   position: absolute;
+  left: 100px;
   bottom: 0px;
   filter: drop-shadow(-10px 5px 0px var(--background-secondary));
   animation: imgCharacterUp 1s;
@@ -70,7 +72,7 @@ body {
 
 @keyframes imgCharacterUp {
   0% {
-    bottom: -100%;
+    left: -100%;
   }
 }
 
@@ -85,6 +87,7 @@ body {
   width: 100% !important;
   margin-top: 70px;
   margin-bottom: 10px;
+  opacity: 1;
 }
 
 .bannerShadowTokyo figcaption h1 {
@@ -92,20 +95,36 @@ body {
   font-size: 2.3rem;
   text-transform: uppercase;
   font-weight: 900;
+  animation: nameCharacter 1s;
+  opacity: 1;
+}
+
+@keyframes nameCharacter {
+  0% {
+    opacity: 0;
+  }
 }
 
 .bannerShadowTokyo figcaption p {
   font-weight: 600;
   line-height: 25px;
   width: 95%;
+  height: 350px;
   overflow: auto;
   padding: 10px;
   padding-left: 14px;
   padding-right: 20px;
   margin-bottom: 50px;
   background-color: #1b1b1b28;
-  backdrop-filter: blur(3px);
+  backdrop-filter: blur(10px);
   border-radius: 5px;
+  animation: descriptionCharacter 1s;
+}
+
+@keyframes descriptionCharacter {
+  0% {
+    height: 0px;
+  }
 }
 
 .bannerShadowTokyo figcaption p::-webkit-scrollbar {
@@ -128,48 +147,249 @@ body {
   width: 295px !important;
 }
 
+.chifuyu img {
+  width: 340px !important;
+}
+.hinataTachibana img {
+  width: 350px !important;
+}
+
+.baji img {
+  width: 310px !important;
+}
+
 /* CHANGE CHARACTER */
 .selectCharacter {
-  width: 200px;
+  width: 390px;
   height: 100%;
+  padding-right: 50px;
+  padding: 30px;
   position: absolute;
   top: 0px;
   right: 0px;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 20px;
+  align-items: flex-end;
+  gap: 25px;
+  overflow: auto;
+}
+
+.selectCharacter::-webkit-scrollbar {
+  width: 0px;
 }
 
 .selectCharacter div {
+  display: flex;
+  position: relative;
+  align-items: center;
+}
+
+.selectCharacter div figure {
   border-radius: 100%;
   background-color: var(--background-secondary);
   border: 3px solid var(--background-primary);
   box-shadow: 5px 5px 20px 0px #1b1b1b90;
-  overflow: hidden;
   width: 100px;
   height: 100px;
-}
-
-.selectCharacter div {
+  transition: 0.3s;
   cursor: pointer;
+  z-index: 3;
 }
 
-.selectCharacter div figure {
-  width: 100%;
-  height: 100%;
+.selectCharacter div figure:hover {
+  transform: scale(1.2);
+  border: 3px solid var(--color-font-primary);
+}
+
+.selectCharacter div figcaption {
+  background-color: var(--background-primary);
+  position: absolute;
+  border-radius: 5px;
+  right: 85px;
+  width: 250px;
+  padding: 10px 20px;
+  padding-right: 35px;
+  display: none;
+  z-index: 2;
+}
+
+.selectCharacter div:hover figcaption {
   display: flex;
-  align-items: center;
-  justify-content: center;
+  transition: 0.5s;
+  animation: nameButton 0.5s;
+  opacity: 1;
 }
 
-.selectCharacter div figure img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+.selectCharacter div:hover figcaption h4 {
+  text-transform: uppercase;
+}
+
+@keyframes nameButton {
+  0% {
+    opacity: 0;
+  }
+}
+
+@keyframes nameButtonh4 {
+  0% {
+    opacity: 0;
+  }
 }
 
 .changeLogoName {
   background-color: rgb(255, 0, 0);
 }
+
+/* IMAGES BUTTONS */
+.hinaButton figure,
+.takemichiButton figure,
+.mikeyButton figure,
+.drakenButton figure,
+.chifuyuButton figure,
+.bajiButton figure,
+.senjuButton figure {
+  background-size: cover;
+}
+
+.hinaButton figure {
+  background-image: url("https://i.pinimg.com/564x/8a/93/08/8a93087af146053e3572c68bfd8123e0.jpg");
+}
+
+.takemichiButton figure {
+  background-image: url("https://i.pinimg.com/564x/c3/d2/fd/c3d2fd07b2b1849f204f3eecf3f02843.jpg");
+}
+
+.mikeyButton figure {
+  background-image: url("https://i.pinimg.com/564x/b4/62/a5/b462a533fccf920250bda3b548f41097.jpg");
+}
+
+.drakenButton figure {
+  background-image: url("https://i.pinimg.com/564x/13/cc/dc/13ccdc839c44f6b3ed7b1ad405e1749f.jpg");
+}
+
+.chifuyuButton figure {
+  background-image: url("https://i.pinimg.com/564x/03/e7/67/03e767743a8859f899916b9b0ad69890.jpg");
+}
+
+.bajiButton figure {
+  background-image: url("https://i.pinimg.com/564x/8c/58/a0/8c58a0b9106f41ff6e2aef7ad78670b5.jpg");
+}
+
+.senjuButton figure {
+  background-image: url("https://i.pinimg.com/564x/15/45/e1/1545e1a2a354e27ffe38016a8108b244.jpg");
+}
+
+/* BACK BUTTON */
+.backButton {
+  position: absolute;
+  left: 20px;
+  top: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 6;
+  transition: 0.3s;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  transition: 0.3s;
+}
+
+.backButton i {
+  width: 50px;
+  height: 50px;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #1b1b1b28;
+  backdrop-filter: blur(10px);
+  font-size: 1.3rem;
+}
+
+.backButton p {
+  width: max-content;
+  padding: 0px 30px;
+  height: 50px;
+  display: none;
+  font-size: 1rem;
+  text-transform: uppercase;
+  font-weight: 800;
+  align-items: center;
+  justify-content: center;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  background-color: var(--color-font-primary);
+  backdrop-filter: blur(10px);
+}
+
+.backButton:hover {
+  box-shadow: 7px 7px 15px 0px #1b1b1b30;
+}
+
+.backButton:hover p {
+  color: var(--important-color);
+}
+
+.backButton i:hover {
+  border-top-right-radius: 0px;
+  border-bottom-right-radius: 0px;
+}
+
+.backButton:hover p {
+  display: flex;
+}
+
+/* AUDIO */
+
+#customControls {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  width: max-content;
+  height: 60px;
+  display: flex;
+  z-index: 999 !important;
+}
+/* 
+#customControls span {
+  background-color: var(--bck-principal);
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  padding: 0px 30px;
+  display: none;
+  position: fixed;
+  align-items: center;
+  height: 60px;
+  left: 60px;
+  padding-left: 45px;
+} */
+
+#playButton,
+#pauseButton {
+  width: 50px;
+  height: 50px;
+  border-radius: 10px;
+  background-color: var(--color-important);
+  background-color: #1b1b1b28;
+  backdrop-filter: blur(10px);
+  display: flex;
+  width: 50px;
+  height: 50px;
+  border-radius: 5px;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.8rem;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+#playButton:hover,
+#pauseButton:hover {
+  box-shadow: 0px 0px 50px 0px var(--color-important);
+}
+
+/* #customControls:hover span {
+  display: flex;
+} */

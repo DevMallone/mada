@@ -1,44 +1,54 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Mada - Tokyo Revengers</title>
     <!-- STYLE CSS TOKYO -->
     <link rel="stylesheet" href="assets/css/tokyostyle.css" />
+    <!-- FONT AWESSOME -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- FAVICON -->
+    <link
+      rel="shortcut icon"
+      href="assets/img/madaimages/logo.png"
+      type="image/x-icon"
+    />
   </head>
   <body>
+    <audio id="myAudio" class="custom-audio" autoplay loop>
+      <source src="assets/music/Tokyo Revengers.mp3" type="audio/mp3" />
+      Seu navegador não suporta o elemento de áudio.
+    </audio>
+
+    <div id="customControls" class="custom-audio-controls">
+      <div id="playButton" class="custom-play-button">
+        <i class="fas fa-play"></i>
+      </div>
+      <div id="pauseButton" class="custom-pause-button">
+        <i class="fas fa-pause"></i>
+      </div>
+    </div>
+    <!-- BACK BUTTON -->
+    <a href="index.html" class="backButton">
+      <i class="fas fa-chevron-left"></i>
+      <p>Voltar</p>
+    </a>
     <!-- IMAGE BANNER TOKYO -->
     <section class="bannerTokyo">
       <div class="bannerShadowTokyo">
-        <div class="hinataTachibana">
-          <figure>
-            <img
-              src="assets/img/tokyorevengers/character/aniyuki-tachibana-hinata-16-PhotoRoom.png-PhotoRoom (1).png"
-              alt="character"
-            />
-          </figure>
-          <figcaption>
-            <img src="assets/img/tokyorevengers/logo/logo.png" alt="" />
-            <h1>Hinata Tachibana</h1>
-            <p>
-              Ela é uma dos Personagens Principais de Tokyo Revengers e a
-              namorada de Takemichi. Hinata é simpática e extrovertida, assim
-              como tem um forte senso de justiça. Aliás, antes de Takemichi
-              voltar no tempo, ela se envolveu em uma disputa com a gangue Tokyo
-              Manji e foi assassinada.
-              <br /><br />
-              Hinata tem uma personalidade muito extrovertida e otimista, assim
-              como sempre encontra maneiras de melhorar situações indesejáveis.
-              Mesmo quando os outros ficam desmoralizados ou desesperados,
-              Hinata permanece forte para empurrá-los para frente.
-            </p>
-          </figcaption>
-        </div>
+        <!-- TAKEMICHI -->
         <div class="takemichi">
           <figure>
             <img
-              src="assets/img/tokyorevengers/character/Takemichi2.png"
+              loading="lazy"
+              src="assets/img/tokyorevengers/character/takemichi.png"
               alt="character"
             />
           </figure>
@@ -64,9 +74,37 @@
             </p>
           </figcaption>
         </div>
+        <!-- HINA -->
+        <div class="hinataTachibana">
+          <figure>
+            <img
+              loading="lazy"
+              src="assets/img/tokyorevengers/character/hina.png"
+              alt="character"
+            />
+          </figure>
+          <figcaption>
+            <img src="assets/img/tokyorevengers/logo/logo.png" alt="" />
+            <h1>Hinata Tachibana</h1>
+            <p>
+              Ela é uma dos Personagens Principais de Tokyo Revengers e a
+              namorada de Takemichi. Hinata é simpática e extrovertida, assim
+              como tem um forte senso de justiça. Aliás, antes de Takemichi
+              voltar no tempo, ela se envolveu em uma disputa com a gangue Tokyo
+              Manji e foi assassinada.
+              <br /><br />
+              Hinata tem uma personalidade muito extrovertida e otimista, assim
+              como sempre encontra maneiras de melhorar situações indesejáveis.
+              Mesmo quando os outros ficam desmoralizados ou desesperados,
+              Hinata permanece forte para empurrá-los para frente.
+            </p>
+          </figcaption>
+        </div>
+        <!-- MIKEY -->
         <div class="mikey">
           <figure>
             <img
+              loading="lazy"
               src="assets/img/tokyorevengers/character/mikey.png"
               alt="character"
             />
@@ -95,9 +133,11 @@
             </p>
           </figcaption>
         </div>
+        <!-- DRAKEN -->
         <div class="draken">
           <figure>
             <img
+              loading="lazy"
               src="assets/img/tokyorevengers/character/draken.png"
               alt="character"
             />
@@ -131,52 +171,152 @@
             </p>
           </figcaption>
         </div>
+        <!-- CHIFUYU -->
+        <div class="chifuyu">
+          <figure>
+            <img
+              loading="lazy"
+              src="assets/img/tokyorevengers/character/chifuyu.png"
+              alt="character"
+            />
+          </figure>
+          <figcaption>
+            <img src="assets/img/tokyorevengers/logo/logo.png" alt="" />
+            <h1>CHIFUYU MATSUNO</h1>
+            <p>
+              Chifuyu é o vice-líder da Segunda Geração da Toman e é um dos dois
+              protagonistas da série em mangá spin-off Tokyo Revengers: Letter
+              from Keisuke Baji. Ele é um rapaz leal que ostenta um
+              comportamento calmo e lógico. Ele não está disposto a deixar o
+              lado de seus amigos e se recusa a lutar contra aqueles que
+              considera próximos a ele. Além disso, ele está disposto a deixar
+              suas emoções brilharem quando uma situação exige isso e não se
+              esquiva de ajudar os outros cegamente. Mesmo que seja espancado
+              por ou por amigos, ele ainda fica ao lado deles.
+            </p>
+          </figcaption>
+        </div>
+        <!-- BAJI -->
+        <div class="baji">
+          <figure>
+            <img
+              src="assets/img/tokyorevengers/character/baji.png"
+              alt="character"
+            />
+          </figure>
+          <figcaption>
+            <img src="assets/img/tokyorevengers/logo/logo.png" alt="" />
+            <h1>KEISUKE BAJI</h1>
+            <p>
+              Foi o Capitão da Primeira Divisão da Gangue Tokyo Manji e um de
+              seus membros fundadores. Baji tem uma personalidade selvagem. Ele
+              adora a emoção da adrenalina e o próprio Mikey diz que daria um
+              soco em alguém na rua sem motivo aparente, apenas porque tem
+              vontade. Em combate, ele nunca fica sem seu sorriso
+              característico.
+              <br /><br />
+              Sendo o capitão da primeira divisão de Toman, Baji tem autoridade
+              e comando sobre todo o seu pelotão e diretamente sobre Chifuyu
+              Matsuno, seu vice-capitão. Não está claro qual era sua autoridade
+              sob Valhalla, embora possivelmente maior do que a média devido ao
+              seu teste de força e lealdade.
+              <br /><br />
+              Baji é um dos lutadores mais fortes de Toman, capaz de enfrentar
+              vários adversários fortes sozinho. Sua resistência também não é
+              motivo de riso, já que ele é capaz de lutar para passar por 50
+              inimigos com um ferimento profundo nas costas e apenas tendo uma
+              barra de ferro ao lado, apenas desabando quando começou a sofrer
+              de anemia.
+            </p>
+          </figcaption>
+        </div>
+        <!-- SENJU -->
+        <div class="senju">
+          <figure>
+            <img
+              loading="lazy"
+              src="assets/img/tokyorevengers/character/senju.png"
+              alt="character"
+            />
+          </figure>
+          <figcaption>
+            <img src="assets/img/tokyorevengers/logo/logo.png" alt="" />
+            <h1>SENJU KAWARAGI</h1>
+            <p>
+              Senju é uma jovem de estatura abaixo da média, com cabelo curto
+              rosa claro, olhos verdes e cílios proeminentes, compartilhando
+              características faciais semelhantes com seu irmão mais velho,
+              Haruchiyo Sanzu. Devido ao seu penteado desgrenhado em camadas com
+              ondas indisciplinadas e pontas rombas, então ela é frequentemente
+              confundida com um menino. Senju sempre usa o tradicional uniforme
+              Brahman com mangas personalizadas para um padrão de flor de
+              cerejeira em vez da tipografia Black Dragon. Ela usa jeans skinny
+              para as roupas de baixo, assim como um par de tênis preto para
+              calçados.
+              <br /><br />
+              Como presidente de uma das gangues mais fortes surgidas durante o
+              Período Sengoku de Tóquio, portanto Senju comanda uma força de
+              combate incrivelmente temível. Ela tem a lealdade dos membros
+              fundadores do Black Dragon, um dos quais é seu irmão mais velho,
+              que são extremamente poderosos por seus próprios méritos. Apesar
+              das diferenças geracionais entre Senju e seus subordinados, já que
+              Brahman é conhecido por abrigar lutadores de gerações anteriores,
+              ela permanece no topo das classificações com o apoio do Dragão
+              Negro da Primeira Geração.
+            </p>
+          </figcaption>
+        </div>
       </div>
+      <!-- SELECT CHARACTER -->
       <div class="selectCharacter">
         <!-- BUTTON HINA -->
         <div class="hinaButton">
-          <figure>
-            <img
-              src="https://i.pinimg.com/564x/75/04/70/750470ebc04fb44b8f5c09b63b3549f0.jpg"
-              alt=""
-            />
-          </figure>
+          <figcaption>
+            <h4>HINATA TACHIBANA</h4>
+          </figcaption>
+          <figure></figure>
         </div>
         <!-- BUTTON TAKEMICHI -->
         <div class="takemichiButton">
-          <figure>
-            <img
-              src="https://animeshelter.com/wp-content/uploads/2021/04/tokyo-revengers-episode-1-0868-648x365.jpg"
-              alt=""
-            />
-          </figure>
+          <figcaption>
+            <h4>TAKEMICHI HANAGAKI</h4>
+          </figcaption>
+          <figure></figure>
         </div>
         <!--  BUTTON MIKEY -->
         <div class="mikeyButton">
-          <figure>
-            <img
-              src="https://media-assets-ggwp.s3.ap-southeast-1.amazonaws.com/2021/07/fakta-menarik-mikey-tokyo-revengers-640x360.jpg"
-              alt=""
-            />
-          </figure>
+          <figcaption>
+            <h4>MANJIRO SANO</h4>
+          </figcaption>
+          <figure></figure>
         </div>
-        <!--  BUTTON -->
+        <!--  BUTTON DRAKEN -->
         <div class="drakenButton">
-          <figure>
-            <img
-              src="https://animatumx.com/wp-content/uploads/2021/09/draken1.jpg"
-              alt=""
-            />
-          </figure>
+          <figcaption>
+            <h4>KEN RYUGUJI</h4>
+          </figcaption>
+          <figure></figure>
         </div>
-        <!--  BUTTON -->
-        <div class="takemichiButton">
-          <figure>
-            <img
-              src="assets/img/tokyorevengers/character/takemichi.png"
-              alt=""
-            />
-          </figure>
+        <!--  BUTTON CHIFUYU -->
+        <div class="chifuyuButton">
+          <figcaption>
+            <h4>CHIFUYU MATSUNO</h4>
+          </figcaption>
+          <figure></figure>
+        </div>
+        <!--  BUTTON BAJI -->
+        <div class="bajiButton">
+          <figcaption>
+            <h4>Keisuke Baji</h4>
+          </figcaption>
+          <figure></figure>
+        </div>
+        <!--  BUTTON SENJU -->
+        <div class="senjuButton">
+          <figcaption>
+            <h4>SENJU KAWARAGI</h4>
+          </figcaption>
+          <figure></figure>
         </div>
       </div>
     </section>
