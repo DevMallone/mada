@@ -1,0 +1,230 @@
+*{
+    border: 0px;
+    padding: 0px;
+    margin: 0px;
+    list-style: none;
+    text-decoration: none;
+    box-sizing: border-box; 
+}
+@font-face {
+    font-family: commando;
+    src: url(..//fonts/boku/commando.ttf);
+}
+
+body{
+
+    background-color: #494444;
+   
+    
+
+}
+
+.hero-header{
+    height: 110px;
+    width: 100%;    
+    display: flex;
+    justify-content: space-between;
+    z-index: 999;
+    position: fixed;
+    padding: 8px;
+    background-color: rgba(0, 0, 0, 0.426);
+    box-shadow:  0px 0px 10px 10px #151515cb !important;
+    
+    
+}
+
+.hero-header figure{
+    height: 100px;
+    width: 100px;
+    margin-left: 100px;
+
+}
+.hero-header figure a{
+    height: 100%;
+    width: 100%;
+
+}
+.hero-header figure a img{
+    width: 100%;
+  
+}
+
+.hero-header figure a img:hover{
+    filter: drop-shadow(0 5px 10px #064809cd);
+    margin-left: -20px;
+    transition: .3s;
+ 
+}
+
+
+.hero-header nav{
+    margin-top: 30px;
+    margin-right: 50px;
+}
+
+.hero-header nav ul{
+    display: flex;
+    gap: 50px;
+}
+.hero-header nav ul li a{
+    color: #ffffffcb;
+    font-size: 1.1rem;
+    font-weight: 800;
+    font-family: commando;
+    letter-spacing:  2px;
+}
+
+.hero-header nav ul li a:hover{
+    filter: drop-shadow(0px 0px 5px #ff3f3fe3);
+
+}
+
+
+.hero-banner{
+    height: 100vh;
+    width: 100%;
+    background-image: url('/assets/img/boku/2883771.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: 998;
+    box-shadow: inset 0px 0px 10px 10px #151515cb !important;
+    position: relative;
+
+}
+
+.hero-banner div{
+    height: 100%;
+    width: 100%;
+    background-color: #000000c1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow:  0px 0px 10px 10px #151515cb;
+
+}
+
+.hero-banner div figure{
+    margin-top: 50px;
+    height:500px;
+    width: 700px;
+}
+
+
+
+.hero-banner div figure img{
+    width: 100%;
+    filter: drop-shadow(0 0 20px #ff3e3ecd);
+}
+
+.hero-person{
+    height: max-content;
+    width: 100%;
+        box-shadow: inset 0px 0px 10px 10px #151515cb !important;
+    height: 520vh;
+
+    
+}
+
+.hero-person .box-person{
+    display: flex;
+    width: 90%;
+    margin-inline: auto;
+    justify-content: space-between;
+    position: relative;
+    height:770px;
+
+   
+
+
+   
+}
+.box1{
+    display: flex;
+}
+
+
+.box2
+{
+    top:100px;
+}
+.box3{
+    top: 200px;
+}
+.box4{
+    top: 300px;
+}
+.box5{
+    top: 400px;
+}
+
+
+
+
+.box-person figure{
+    width: 40%;
+    margin-top: 50px;
+}
+.box-person img{
+    width: 40%;
+}
+.ani-left{
+    animation: anileft 3s;
+    position: absolute;
+    left: 0px;
+}
+
+@keyframes anileft{
+
+    0%{
+        left: -100%;
+    }
+
+
+    
+}
+
+
+.box-person div{
+    
+    width: 50%;
+    position: absolute;
+    right: 0;
+    
+}
+
+.ani-right{
+    animation: aniright 5s;
+    position: absolute;
+    right: 0px;
+
+}
+@keyframes aniright{
+
+    0%{
+        right: -100%;
+    }
+    
+}
+
+
+.box-person div h3{
+    font-family: commando;
+    font-size: 4rem;
+    margin-top: 60px;
+    letter-spacing: 10px;
+    color: #2CACFD;
+    text-align: center;
+    margin-bottom: 20px;
+    white-space: nowrap;
+}
+
+
+.box-person div p{
+    color: #ffff;
+    text-align: justify;
+    line-height: 1.5rem;
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+
