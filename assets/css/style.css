@@ -21,11 +21,11 @@
 
 /* ROOT */
 :root {
-  --bckcolorprimary: #0a0a0a;
-  --bckcolorsecondary: #161616;
+  --bckcolorprimary: #000000;
+  --bckcolorsecondary: #252422;
   --colornormalwhite: #f4f4f4;
   --colornormalgrey: #d1d1d1;
-  --importantcolor: #f99925;
+  --importantcolor: #f3921e;
 }
 
 /* SCROLL PAGE */
@@ -36,7 +36,6 @@
 
 ::-webkit-scrollbar-thumb {
   background-color: var(--importantcolor);
-  border-radius: 10px;
 }
 
 /* BODY */
@@ -46,23 +45,29 @@ body {
 }
 
 /* MENU */
-.menu {
+header {
   width: 100%;
-  padding: 30px 0px;
+  height: 140px;
   display: flex;
   align-items: center;
   justify-content: center;
-  flex-direction: column;
   position: fixed;
-  background-color: #2b2b2ba9;
-  backdrop-filter: blur(3px);
-  gap: 20px;
+  top: 0;
+}
+
+.menu {
+  width: 80%;
+  display: flex;
+  margin-inline: auto;
+  align-items: center;
+  justify-content: center;
   z-index: 999;
   transition: 0.3s;
+  gap: 50px;
 }
 
 .menu .logo {
-  width: 60px;
+  width: 75px;
 }
 
 .menu .logo img {
@@ -75,7 +80,7 @@ body {
 }
 
 .menu ul li a {
-  font-size: 1rem;
+  font-size: 0.8rem;
   text-transform: uppercase;
   font-weight: 700;
   cursor: pointer;
@@ -96,21 +101,26 @@ body {
 }
 
 .menuScroll {
+  width: 100%;
   display: flex;
   align-items: center;
   justify-content: space-between;
   flex-direction: row;
-  background-color: #0a0a0ac5;
+  background-color: var(--bckcolorsecondary);
+  box-shadow: 0px 0px 20px 0px #000;
   height: 75px;
+  z-index: 999;
+}
+
+.menuScroll .menu {
+  width: 90%;
 }
 
 .menuScroll .logo {
-  margin-left: 50px;
   width: 40px;
 }
 
 .menuScroll ul {
-  margin-right: 50px;
   gap: 5px;
 }
 
@@ -121,18 +131,24 @@ body {
 
 /* BANNER INITIAL */
 .bannerInitial {
-  width: 100%;
-  height: 120vh;
-  background-image: url(..//img/madaimages/imageBanner/banner.png);
+  width: 90%;
+  height: calc(93vh - 140px);
+  margin-inline: auto;
+  margin-top: 140px;
+  border-radius: 50px;
+  background-image: url("https://wallpapercave.com/wp/wp10938513.jpg");
   background-size: cover;
+  /* background-attachment: fixed; */
+  background-position: top;
   box-shadow: 0px 10px 20px 0px #000;
 }
 
 .bannerInitial div {
   width: 100%;
   height: 100%;
-  background-color: #000000c7;
+  background-color: #000000e1;
   display: flex;
+  border-radius: 40px;
   align-items: center;
   justify-content: center;
   flex-direction: column;
@@ -140,20 +156,22 @@ body {
 }
 
 .bannerInitial div h1 {
-  font-size: 7rem;
+  font-size: 10rem;
   text-transform: uppercase;
   font-weight: 800;
-  margin-top: 130px;
+  line-height: 135px;
+  text-align: center;
   font-family: STAR7;
   letter-spacing: 10px;
-  color: var(--importantcolor);
-  text-shadow: var(--colornormalwhite) 8px 8px 0px;
+
+  /* text-shadow: var(--colornormalwhite) 8px 8px 0px; */
 }
 
 .bannerInitial div p {
-  width: 55%;
+  width: 50%;
   text-align: center;
-  font-size: 1rem;
+  font-size: 1.2rem;
+
   font-weight: 600;
 }
 
@@ -171,124 +189,84 @@ body {
   font-family: STAR7;
   letter-spacing: 5px;
   color: var(--importantcolor);
+  font-size: 3rem;
 }
 
-/* BANNER INITIAL */
-.allContents {
+/* SLIDE */
+
+swiper-container {
   width: 90%;
-  height: 95vh;
-  padding-top: 100px;
-  margin: 50px 0px;
   margin-inline: auto;
-  display: flex;
-  justify-content: space-between;
+  height: 500px;
+  margin-top: 50px;
 }
 
-.allContents figure {
-  width: 50%;
-  height: 100%;
+swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
   display: flex;
+  border-radius: 10px;
+  justify-content: center;
   align-items: center;
   overflow: hidden;
-  justify-content: center;
-  position: relative;
-  background-color: var(--bckcolorsecondary);
-  background-size: cover;
-  border-radius: 10px;
-  box-shadow: 0px 0px 30px 0px #000;
 }
 
-.allContents figure img {
-  width: 60%;
-}
-
-.allContents figcaption {
-  width: 45%;
+.slide {
+  width: 100%;
   height: 100%;
-  display: flex;
-  justify-content: space-between;
-  align-items: start;
-  flex-direction: column;
-}
-
-.allContents figcaption h1 {
-  letter-spacing: 5px;
-  font-family: STAR7;
-  font-size: 3rem;
-  color: var(--importantcolor);
-}
-
-.allContents figcaption p {
-  font-size: 1rem;
-  width: 95%;
-}
-
-.allButtons {
-  border: none;
-  background-color: var(--importantcolor);
-  width: 100%;
-  height: 50px;
-  border-radius: 5px;
-  font-size: 1rem;
-  text-transform: uppercase;
-  font-weight: 800;
-  color: var(--bckcolorprimary);
-  letter-spacing: 5px;
   cursor: pointer;
-  transition: 0.3s;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  background-color: #000000ea;
 }
 
-.allButtons:hover {
-  box-shadow: 0px 0px 20px 0px #f9992590;
-}
-
-#bokunohero figure img {
+.slide figcaption {
   width: 100%;
+  height: 130px;
+  position: absolute;
+  bottom: 0px;
+  left: 0;
+  display: flex;
+  align-items: start;
+  justify-content: end;
+  flex-direction: column;
+  padding-left: 50px;
+  /* background-color: #000000d7; */
+  background: linear-gradient(
+    0deg,
+    rgba(0, 0, 0, 1) 41%,
+    rgba(0, 0, 0, 0.74) 62%,
+    rgba(0, 0, 0, 0) 100%
+  );
 }
 
-#blackclover figure img {
-  position: absolute;
-  width: 118%;
-}
-
-#bokunohero figure img {
-  position: absolute;
-
-  width: 155%;
-}
-
-#baki figure img {
-  position: absolute;
-
-  width: 155%;
-}
-
-#jujutsukaisen figure img {
-  width: 165%;
-  position: absolute;
-}
-
-#tokyorevengers figure img {
-  width: 155%;
-  position: absolute;
+.slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 /* FOOTER */
 footer {
   width: 100%;
-  height: 250px;
+  height: 150px;
   margin-top: 150px;
   background-color: var(--bckcolorsecondary);
+  background-image: url("https://wallpapercave.com/wp/wp10938513.jpg");
+  background-size: cover;
+}
+
+footer div {
+  width: 100%;
+  height: 100%;
+  background-color: #000000e1;
   display: flex;
-  flex-direction: column;
+  padding: 0px 80px;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
   gap: 20px;
 }
 
 footer img {
-  width: 100px;
+  width: 70px;
 }
